@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home Template</title>
+    </head>
+    <body>
+        <h1>This is Template View</h1>
+        <p>We are working on the Template this is home page</p>
+        <p>Enter your text below</p>
+        <form action="/analyzetext/" method="post" > {% csrf_token %}
+            <textarea name="text" style="margin: 0px; width: 721px; height: 93px;"></textarea>
+            <input type="checkbox" name="removepunc">Remove Punctuations<br>
+            <input type="checkbox" name="capitalize">Capitalize<br>
+            <input type="checkbox" name="char_count">Character Count<br>
+            <button type="submit">Analyze text</button>
+        </form>
+        <p>To Visit about section click <a href="/about/">here</a></p>
+    </body>
+</html>
